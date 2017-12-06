@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+	background-color: blue;
+}
+
+td{
+	height: 200px;
+	width: 200px;
+	border: 2px solid black;
+	
+}
+table {
+	background-color: white;
+	border-collapse: collapse;
+}
