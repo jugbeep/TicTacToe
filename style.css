@@ -17,3 +17,9 @@ table {
 	background-color: white;
 	border-collapse: collapse;
 }
+#x {
+	pointer-events: none;
+}
+#o {
+	pointer-events: none;
+}
