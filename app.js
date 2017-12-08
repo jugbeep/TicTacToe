@@ -8,7 +8,7 @@ let unchecked = false;
 let win = false;
 let count = 0;
 
-
+let cell1 = $('#cell1');
 
 $('.cell').on('click', function altXandO() {
 
@@ -21,16 +21,23 @@ count ++;
 	if (count % 2 === 0) {
 		$(this).removeClass('.open');
 		$(this).addClass('played');
-		$(this).html('<p id="x">X</p>');
+		$(this).addClass('X');
+		$(this).html('X');
 	};
 	if (count % 2 !== 0) {
 		$(this).removeClass('.open');
 		$(this).addClass('played');
-		$(this).html('<p id="o">O</p>');
+		$(this).addClass('O');
+		$(this).html('O');
 	};
 });
-//check for win	
-
+//check for win
+function CheckForWin() {
+ 	if ( cell1.hasClass('O')) { //&& $('#cell2').hasClass('O') && $('cell3').hasClass('O')) {
+ 		alert ('O Wins!');
+ 	} 
+}	
+CheckForWin();
 });
 ;
 
