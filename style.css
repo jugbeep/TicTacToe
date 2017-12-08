@@ -5,6 +5,7 @@
 }
 body {
 	background-color: blue;
+	text-align: center;
 }
 
 td {
@@ -16,10 +17,16 @@ td {
 table {
 	background-color: white;
 	border-collapse: collapse;
+	margin: auto;
 }
-#x {
-	pointer-events: none;
+.playedX {
+	text-align: center;
+	font-size: 5em;
+	background-color: #AD758F
+
 }
-#o {
-	pointer-events: none;
+.playedO{
+	text-align: center;
+	font-size: 5em ;
+	background-color: #31f198
 }
