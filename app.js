@@ -6,11 +6,19 @@ $(document).ready(function(){
 //global varibles 
 
 let count = 0;
-let cell2 = $('#cell2')
+
+//wins
+let win1 = $('#cell1') && $('#cell2') && $('#cell3');
+let win2 = $('#cell4') && $('#cell5') && $('#cell6');
+let win3 = $('#cell7') && $('#cell8') && $('#cell9');
+let win4 = $('#cell1') && $('#cell4') && $('#cell7');
+let win5 = $('#cell2') && $('#cell5') && $('#cell8');
+let win6 = $('#cell3') && $('#cell6') && $('#cell9');
+let win7 = $('#cell7') && $('#cell5') && $('#cell3');
+let win8 = $('#cell1') && $('#cell5') && $('#cell9');
 
 $('.cell').on('click', function() {
-
-count ++; 	
+	count ++; 	
 	//check if cell is free
 	if ($(this).is('.played')) {
 		return;
@@ -28,22 +36,61 @@ count ++;
 		$(this).addClass('playedX');
 		$(this).html('X');
 	};
-});
-//check for win
-function checkForWin() {
- 	if (cell2.hasClass('playedO') == true ) { //&& $('#cell2').hasClass('O') && $('cell3').hasClass('O')) {
- 		console.log('O Wins!');
- 	} 
 
-}	
-checkForWin();
+
+//check for X win
+
+	
+	if ($(win1).hasClass('playedX')) {
+		alert('X Wins');
+	} else if ($(win2).hasClass('playedX')) {
+		alert('X Wins');
+	} else if ($(win3).hasClass('playedX')) {
+		alert('X Wins');	
+	} else if ($(win4).hasClass('playedX')) {
+		alert('X Wins');
+	} else if ($(win5).hasClass('playedX')) {
+		alert('X Wins');
+	} else if ($(win6).hasClass('playedX')) {
+		alert('X Wins');
+	} else if ($(win7).hasClass('playedX')) {
+		alert('X Wins');
+	} else if ($(win8).hasClass('playedX')) {
+		alert('X Wins');
+// check if O wins
+	// } if ($(win1).hasClass('playedO')) {
+	// 	alert('O Wins');
+	// } if ($(win2).hasClass('playedO')) {
+	// 	alert('O Wins');
+	// } if ($(win3).hasClass('playedO')) {
+	// 	alert('O Wins');
+	// } if ($(win4).hasClass('playedO')) {
+	// 	alert('O Wins');
+	// } if ($(win5).hasClass('playedO')) {
+	// 	alert('O Wins');
+	// } if ($(win6).hasClass('playedO')) {
+	// 	alert('O Wins');
+	// } if ($(win7).hasClass('playedO')) {
+	// 	alert('O Wins');
+	// } if ($(win8).hasClass('playedO')) {
+	// 	alert('O Wins');
+	// };
+
+
+
+};
+});
 });
 
-;
+
 
 	
 //clear the board
-//win alert
-//tie alert
+// //win alert
+// //tie alert
 
+// 	if ($('.cell').hasClass('playedO')) {
+// 		alert('X wins!')
+// 	}
+	
 
